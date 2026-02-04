@@ -27,6 +27,15 @@ namespace frmCalculadora
                 a = Convert.ToInt32(txtVariable1);
                 b = int.Parse(txtVariable2.Text);
 
+                if (rdbSuma.Checked)
+                    resultado = a + b;
+                if(rdbResta.Checked)
+                    resultado = a - b;
+                if(rdbMultiplicacion.Checked)
+                    resultado = a * b;
+                if(rdbDivision.Checked)
+                    resultado = a / b;
+
                 resultado = a + b;
                 MessageBox.Show("El resultado es: " + resultado.ToString(), "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -43,8 +52,13 @@ namespace frmCalculadora
 
         private void reset()
         {
-        txtVariable1.Clear();
-        txtVariable2.Clear();
+            txtVariable1.Clear();
+            txtVariable2.Clear();
         }
-}
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

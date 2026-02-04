@@ -34,6 +34,12 @@
             txtVariable1 = new TextBox();
             txtVariable2 = new TextBox();
             btnReset = new Button();
+            groupBox1 = new GroupBox();
+            rdbSuma = new RadioButton();
+            rdbResta = new RadioButton();
+            rdbMultiplicacion = new RadioButton();
+            rdbDivision = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -41,22 +47,23 @@
             label1.AutoSize = true;
             label1.Location = new Point(41, 24);
             label1.Name = "label1";
-            label1.Size = new Size(118, 32);
+            label1.Size = new Size(120, 32);
             label1.TabIndex = 2;
-            label1.Text = "Variable 1";
+            label1.Text = "Variable A";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(41, 244);
             label2.Name = "label2";
-            label2.Size = new Size(118, 32);
+            label2.Size = new Size(119, 32);
             label2.TabIndex = 3;
-            label2.Text = "Variable 2";
+            label2.Text = "Variable B";
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(493, 156);
+            btnCalcular.Location = new Point(709, 146);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(150, 46);
             btnCalcular.TabIndex = 4;
@@ -81,7 +88,7 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(493, 272);
+            btnReset.Location = new Point(709, 214);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(150, 46);
             btnReset.TabIndex = 7;
@@ -89,11 +96,69 @@
             btnReset.UseVisualStyleBackColor = true;
             btnReset.Click += btnReset_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbDivision);
+            groupBox1.Controls.Add(rdbMultiplicacion);
+            groupBox1.Controls.Add(rdbResta);
+            groupBox1.Controls.Add(rdbSuma);
+            groupBox1.Location = new Point(316, 72);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(343, 246);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Operaciones";
+            // 
+            // rdbSuma
+            // 
+            rdbSuma.AutoSize = true;
+            rdbSuma.Location = new Point(22, 38);
+            rdbSuma.Name = "rdbSuma";
+            rdbSuma.Size = new Size(111, 36);
+            rdbSuma.TabIndex = 0;
+            rdbSuma.TabStop = true;
+            rdbSuma.Text = "SUMA";
+            rdbSuma.UseVisualStyleBackColor = true;
+            // 
+            // rdbResta
+            // 
+            rdbResta.AutoSize = true;
+            rdbResta.Location = new Point(22, 80);
+            rdbResta.Name = "rdbResta";
+            rdbResta.Size = new Size(110, 36);
+            rdbResta.TabIndex = 1;
+            rdbResta.TabStop = true;
+            rdbResta.Text = "RESTA";
+            rdbResta.UseVisualStyleBackColor = true;
+            // 
+            // rdbMultiplicacion
+            // 
+            rdbMultiplicacion.AutoSize = true;
+            rdbMultiplicacion.Location = new Point(22, 134);
+            rdbMultiplicacion.Name = "rdbMultiplicacion";
+            rdbMultiplicacion.Size = new Size(228, 36);
+            rdbMultiplicacion.TabIndex = 2;
+            rdbMultiplicacion.TabStop = true;
+            rdbMultiplicacion.Text = "MULTIPLICACION";
+            rdbMultiplicacion.UseVisualStyleBackColor = true;
+            // 
+            // rdbDivision
+            // 
+            rdbDivision.AutoSize = true;
+            rdbDivision.Location = new Point(22, 188);
+            rdbDivision.Name = "rdbDivision";
+            rdbDivision.Size = new Size(144, 36);
+            rdbDivision.TabIndex = 3;
+            rdbDivision.TabStop = true;
+            rdbDivision.Text = "DIVISION";
+            rdbDivision.UseVisualStyleBackColor = true;
+            // 
             // frmCalculadora
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1008, 568);
+            Controls.Add(groupBox1);
             Controls.Add(btnReset);
             Controls.Add(txtVariable2);
             Controls.Add(txtVariable1);
@@ -102,6 +167,8 @@
             Controls.Add(label1);
             Name = "frmCalculadora";
             Text = "Calculadora";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,5 +181,10 @@
         private TextBox txtVariable1;
         private TextBox txtVariable2;
         private Button btnReset;
+        private GroupBox groupBox1;
+        private RadioButton rdbDivision;
+        private RadioButton rdbMultiplicacion;
+        private RadioButton rdbResta;
+        private RadioButton rdbSuma;
     }
 }

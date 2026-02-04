@@ -6,5 +6,23 @@ namespace frmCalculadora
         {
             InitializeComponent();
         }
+
+
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ordenamientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void burbujaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBurbuja burbuja = new frmBurbuja();
+            burbuja.Show();
+        }
     }
 }
