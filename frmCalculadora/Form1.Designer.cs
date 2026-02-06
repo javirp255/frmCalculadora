@@ -35,6 +35,7 @@
             calculadoraSimpleToolStripMenuItem = new ToolStripMenuItem();
             ordenamientosToolStripMenuItem = new ToolStripMenuItem();
             burbujaSimpleToolStripMenuItem = new ToolStripMenuItem();
+            registrosToolStripMenuItem = new ToolStripMenuItem();
             mnsStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +59,13 @@
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(359, 44);
+            salirToolStripMenuItem.Size = new Size(192, 44);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(166, 38);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -86,9 +87,16 @@
             // burbujaSimpleToolStripMenuItem
             // 
             burbujaSimpleToolStripMenuItem.Name = "burbujaSimpleToolStripMenuItem";
-            burbujaSimpleToolStripMenuItem.Size = new Size(359, 44);
+            burbujaSimpleToolStripMenuItem.Size = new Size(309, 44);
             burbujaSimpleToolStripMenuItem.Text = "Burbuja Simple";
             burbujaSimpleToolStripMenuItem.Click += burbujaSimpleToolStripMenuItem_Click;
+            // 
+            // registrosToolStripMenuItem
+            // 
+            registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            registrosToolStripMenuItem.Size = new Size(359, 44);
+            registrosToolStripMenuItem.Text = "Registros";
+            registrosToolStripMenuItem.Click += registrosToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -114,5 +122,6 @@
         private ToolStripMenuItem calculadoraSimpleToolStripMenuItem;
         private ToolStripMenuItem ordenamientosToolStripMenuItem;
         private ToolStripMenuItem burbujaSimpleToolStripMenuItem;
+        private ToolStripMenuItem registrosToolStripMenuItem;
     }
 }

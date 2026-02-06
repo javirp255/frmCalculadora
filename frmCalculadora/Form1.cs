@@ -1,3 +1,5 @@
+using frmCalculadora.Formularios;
+
 namespace frmCalculadora
 {
     public partial class Form1 : Form
@@ -23,6 +25,12 @@ namespace frmCalculadora
         {
             frmBurbuja burbuja = new frmBurbuja();
             burbuja.Show();
+        }
+
+        private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistros registros = new frmRegistros();
+            registros.Show();
         }
     }
 }
