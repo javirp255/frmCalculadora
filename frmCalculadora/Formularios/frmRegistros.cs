@@ -27,12 +27,34 @@ namespace frmCalculadora.Formularios
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedIndex ==1)
+            if (tabControl1.SelectedIndex == 1)
             {
+
                 dgvPersonas.DataSource = null;
                 dgvPersonas.DataSource = persona;
+                verificarRegistros();
             }
+        }
+
+        private void verificarRegistros()
+        {
+            if(persona.Count() == 0)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+                btnEliminar.Enabled = true;
+
+
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            persona.RemoveAt(dgvPersonas.CurrentRow.Index);
+            dgvPersonas.DataSource = null; //Limpia el dataGridview
+            dgvPersonas.DataSource = persona; //Vuelve a cargar el dataGridview
+            verificarRegistros();//verificar el dataGridView para habilitar o deshabilitar el boton eliminar
+        }
     }
 }
 
-}
+

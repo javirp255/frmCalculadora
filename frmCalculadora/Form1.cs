@@ -1,4 +1,5 @@
 using frmCalculadora.Formularios;
+using System.Xml.Linq;
 
 namespace frmCalculadora
 {
@@ -31,6 +32,12 @@ namespace frmCalculadora
         {
             frmRegistros registros = new frmRegistros();
             registros.Show();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditor editor =  new frmEditor();
+            editor.Show();
         }
     }
 }
