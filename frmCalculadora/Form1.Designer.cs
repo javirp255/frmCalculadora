@@ -39,6 +39,8 @@
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             editorToolStripMenuItem = new ToolStripMenuItem();
+            contadorToolStripMenuItem = new ToolStripMenuItem();
+            xmlDirectorioToolStripMenuItem = new ToolStripMenuItem();
             mnsStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,7 +70,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporizadorToolStripMenuItem, editorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporizadorToolStripMenuItem, editorToolStripMenuItem, contadorToolStripMenuItem, xmlDirectorioToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(166, 38);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -120,6 +122,20 @@
             editorToolStripMenuItem.Text = "Editor";
             editorToolStripMenuItem.Click += editorToolStripMenuItem_Click;
             // 
+            // contadorToolStripMenuItem
+            // 
+            contadorToolStripMenuItem.Name = "contadorToolStripMenuItem";
+            contadorToolStripMenuItem.Size = new Size(359, 44);
+            contadorToolStripMenuItem.Text = "Contador";
+            contadorToolStripMenuItem.Click += contadorToolStripMenuItem_Click;
+            // 
+            // xmlDirectorioToolStripMenuItem
+            // 
+            xmlDirectorioToolStripMenuItem.Name = "xmlDirectorioToolStripMenuItem";
+            xmlDirectorioToolStripMenuItem.Size = new Size(359, 44);
+            xmlDirectorioToolStripMenuItem.Text = "XmlDirectorio";
+            xmlDirectorioToolStripMenuItem.Click += xmlDirectorioToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -148,5 +164,7 @@
         private ToolStripMenuItem temporizadorToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem editorToolStripMenuItem;
+        private ToolStripMenuItem contadorToolStripMenuItem;
+        private ToolStripMenuItem xmlDirectorioToolStripMenuItem;
     }
 }

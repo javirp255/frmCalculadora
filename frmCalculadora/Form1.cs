@@ -36,8 +36,20 @@ namespace frmCalculadora
 
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEditor editor =  new frmEditor();
+            frmEditor editor = new frmEditor();
             editor.Show();
+        }
+
+        private void contadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContador contador = new frmContador();
+            contador.Show();
+        }
+
+        private void xmlDirectorioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmXMLAcces xMLAcces = new frmXMLAcces();
+            xMLAcces.Show();
         }
     }
 }
